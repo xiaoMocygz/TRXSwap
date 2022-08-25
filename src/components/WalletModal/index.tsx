@@ -300,12 +300,12 @@ export default function WalletModal({
           <CloseIcon onClick={toggleWalletModal}>
             <CloseColor />
           </CloseIcon>
-          <HeaderRow>{error instanceof UnsupportedChainIdError ? 'Wrong Network' : 'Error connecting'}</HeaderRow>
+          <HeaderRow>{error instanceof UnsupportedChainIdError ? '错误的网络' : '连接错误'}</HeaderRow>
           <ContentWrapper>
             {error instanceof UnsupportedChainIdError ? (
-              <h5>Please connect to the appropriate Tron network.</h5>
+              <h5>请连接到适当的以太坊网络。</h5>
             ) : (
-              'Error connecting. Try refreshing the page.'
+              '连接错误。 尝试刷新页面。'
             )}
           </ContentWrapper>
         </UpperSection>
@@ -335,12 +335,12 @@ export default function WalletModal({
                 setWalletView(WALLET_VIEWS.ACCOUNT)
               }}
             >
-              Back
+              返回
             </HoverText>
           </HeaderRow>
         ) : (
           <HeaderRow>
-            <HoverText>Connect to a wallet</HoverText>
+            <HoverText>连接到钱包</HoverText>
           </HeaderRow>
         )}
         <ContentWrapper>
