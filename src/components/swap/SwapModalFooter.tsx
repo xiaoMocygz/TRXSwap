@@ -69,7 +69,7 @@ export default function SwapModalFooter({
         <RowBetween>
           <RowFixed>
             <TYPE.black fontSize={14} fontWeight={400} color={theme.text2}>
-              {trade.tradeType === TradeType.EXACT_INPUT ? '最低收到' : 'Maximum sold'}
+              {trade.tradeType === TradeType.EXACT_INPUT ? '最低收到' : '最大销售量'}
             </TYPE.black>
             <QuestionHelper text="如果在确认之前出现较大的不利价格变动，您的交易将恢复。" />
           </RowFixed>
@@ -117,7 +117,7 @@ export default function SwapModalFooter({
           id="confirm-swap-or-send"
         >
           <Text fontSize={20} fontWeight={500}>
-            {severity > 2 ? 'Swap Anyway' : '确认兑换'}
+            {severity > 2 ? '仍要兑换' : '确认兑换'}
           </Text>
         </ButtonError>
 

@@ -20,7 +20,7 @@ export class FortmaticConnector extends FortmaticConnectorCore {
       if (chainId in CHAIN_ID_NETWORK_ARGUMENT) {
         this.fortmatic = new Fortmatic(apiKey, CHAIN_ID_NETWORK_ARGUMENT[chainId as FormaticSupportedChains])
       } else {
-        throw new Error(`Unsupported network ID: ${chainId}`)
+        throw new Error(`不支持的网络 ID: ${chainId}`)
       }
     }
 
