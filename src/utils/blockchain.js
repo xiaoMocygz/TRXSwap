@@ -45,7 +45,6 @@ export const tronObj = {
 export const trigger = async (address, functionSelector, parameters = [], options = {}) => {
   try {
     const tronweb = tronObj.tronWeb
-    console.log(tronweb, 'tronweb')
     const transaction = await tronweb.transactionBuilder.triggerSmartContract(
       address,
       functionSelector,
@@ -64,9 +63,15 @@ export const trigger = async (address, functionSelector, parameters = [], option
     return result
   } catch (error) {
     if (error == 'Confirmation declined by user') {
-      console.log(error)
+      class RejectError extends Error {
+        constructor(message) {
+          super(message)
+          this.code = 4001
+        }
+      }
+      console.log(`trigger error ${address} - ${functionSelector}`, error.message ? error.message : error)
+      throw new RejectError('Confirmation declined by user')
     }
-    console.log(`trigger error ${address} - ${functionSelector}`, error.message ? error.message : error)
     return {}
   }
 }
