@@ -75,7 +75,7 @@ export function FindPoolTabs() {
           <StyledArrowLeft />
         </HistoryLink>
         <ActiveText>增加流动性</ActiveText>
-        <QuestionHelper text={"Use this tool to find pairs that don't automatically appear in the interface."} />
+        <QuestionHelper text={"使用此工具查找不会自动出现在界面中的代币对。"} />
       </RowBetween>
     </Tabs>
   )

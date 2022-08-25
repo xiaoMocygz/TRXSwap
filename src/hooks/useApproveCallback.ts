@@ -53,7 +53,7 @@ export function useApproveCallback(
 
   const approve = useCallback(async (): Promise<void> => {
     if (approvalState !== ApprovalState.NOT_APPROVED) {
-      console.error('approve was called unnecessarily')
+      console.error('不必要地调用了批准')
       return
     }
     if (!token) {
@@ -62,12 +62,12 @@ export function useApproveCallback(
     }
 
     if (!tokenContract) {
-      console.error('tokenContract is null')
+      console.error('令牌合同为空')
       return
     }
 
     if (!amountToApprove) {
-      console.error('missing amount to approve')
+      console.error('缺少批准的金额')
       return
     }
 
@@ -98,12 +98,12 @@ export function useApproveCallback(
         console.log(JSON.stringify(response))
 
         addTransaction(response, {
-          summary: 'Approve ' + amountToApprove.currency.symbol,
+          summary: '批准 ' + amountToApprove.currency.symbol,
           approval: { tokenAddress: token.address, spender: spender }
         })
       })
       .catch((error: Error) => {
-        console.debug('Failed to approve token', error)
+        console.debug('无法批准令牌', error)
         throw error
       })
   }, [approvalState, token, tokenContract, amountToApprove, spender, addTransaction])

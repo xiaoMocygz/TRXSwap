@@ -13,7 +13,6 @@ import { ReactComponent as DropDown } from '../../assets/images/dropdown.svg'
 // import BnbLogo from '../../assets/images/bnb.png'
 import { useActiveWeb3React } from '../../hooks'
 // import { useTranslation } from 'react-i18next'
-// import EotcLogo from '../../assets/images/eotclogo.png'
 
 // padding: ${({ selected }) => (selected ? '0.75rem 0.5rem 0.75rem 1rem' : '0.75rem 0.75rem 0.75rem 1rem')};
 const InputRow = styled.div<{ selected: boolean }>`
@@ -93,29 +92,25 @@ const StyledTokenName = styled.span<{ active?: boolean }>`
 
 `
 
-// const StyledBalanceMax = styled.button`
-//   height: 28px;
-//   background-color: ${({ theme }) => theme.primary5};
-//   border: 1px solid ${({ theme }) => theme.primary5};
-//   border-radius: 0.5rem;
-//   font-size: 0.875rem;
+const StyledBalanceMax = styled.button`
+  height: 28px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  position: absolute;
+  top: 6px;
+  left: 65px;
 
-//   font-weight: 500;
-//   cursor: pointer;
-//   margin-right: 0.5rem;
-//   color: ${({ theme }) => theme.primaryText1};
-//   :hover {
-//     border: 1px solid ${({ theme }) => theme.primary1};
-//   }
-//   :focus {
-//     border: 1px solid ${({ theme }) => theme.primary1};
-//     outline: none;
-//   }
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  color: ${({ theme }) => theme.primaryText1};
 
-//   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-//     margin-right: 0.5rem;
-//   `};
-// `
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+    margin-right: 0.5rem;
+  `};
+`
 
 interface CurrencyInputPanelProps {
   value: string
@@ -235,7 +230,7 @@ export default function CurrencyInputPanel({
               {/* && (
                 <StyledBalanceMax onClick={onMax}>MAX</StyledBalanceMax>
               ) */}
-              {account && currency && showMaxButton && label !== 'To'}
+              {account && currency && showMaxButton && label !== 'To' && (<StyledBalanceMax onClick={onMax}>全部</StyledBalanceMax>)}
             </>
           )}
         </InputRow>

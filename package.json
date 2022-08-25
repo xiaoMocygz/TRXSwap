@@ -106,7 +106,7 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@eotcswap/swap-sdk": "git+https://github.com/XJ525/eotcsdk.git",
+    "@eotcswap/swap-sdk": "github:XJ525/eotcsdk",
     "@mcswap/default-token-list": "git+https://github.com/mcswap/default-token-list.git",
     "@mcswap/java-tron-provider": "git+https://github.com/mcswap/java-tron-provider.git",
     "@mcswap/mcswap-v2-core": "git+https://github.com/mcswap/mcswap-v2-core.git",
