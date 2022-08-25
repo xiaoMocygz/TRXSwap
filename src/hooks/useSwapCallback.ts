@@ -264,8 +264,8 @@ export function useSwapCallback(
             } else {
               console.log(error, 'error')
               // otherwise, the error was unexpected and we need to convey that
-              console.error(`Swap failed`, error, 'error', methodName, args, value)
-              throw new Error(`Swap failed: ${error.message}`)
+              console.error(`交换失败`, error, 'error', methodName, args, value)
+              throw new Error(`交换失败: ${error.message}`)
             }
           })
       },
