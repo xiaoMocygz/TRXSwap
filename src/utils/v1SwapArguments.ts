@@ -26,7 +26,7 @@ export default function v1SwapArguments(trade: Trade, options: Omit<TradeOptions
   const isExactIn = trade.tradeType === TradeType.EXACT_INPUT
   const inputETH = trade.inputAmount.currency === ETHER
   const outputETH = trade.outputAmount.currency === ETHER
-  if (inputETH && outputETH) throw new Error('TRX to TRX')
+  if (inputETH && outputETH) throw new Error('ETH to ETH')
   const minimumAmountOut = toHex(trade.minimumAmountOut(options.allowedSlippage))
   const maximumAmountIn = toHex(trade.maximumAmountIn(options.allowedSlippage))
   const deadline = deadlineFromNow(options.ttl)

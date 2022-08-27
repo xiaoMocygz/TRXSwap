@@ -147,7 +147,7 @@ const Config = {
   loginType: {
     tronlink: 'TRONLINK'
   },
-  firstTRXLimit: 10,
+  firstETHLimit: 10,
   trxPrecision: 1e6,
   defaultTokenPrecision: 1e18,
   minPrice: 0.000001,
@@ -236,7 +236,7 @@ if (env === 'testPro') {
     swapServiceV2: 'http://47.252.23.81:10085/swapv2',
     remainTrx: 100,
     remainMaxTrx: 1200,
-    firstTRXLimit: 1000,
+    firstETHLimit: 1000,
     justLink: 'https://djed-test.tronscan.io/',
     justList: 'https://sunlists.justnetwork.io/',
     sunUrl: 'http://123.56.166.152:18109/',
@@ -292,7 +292,7 @@ if (env === 'qaTest') {
     swapServiceV2: 'http://47.252.23.81:10085/swapv2',
     remainTrx: 100,
     remainMaxTrx: 1200,
-    firstTRXLimit: 10,
+    firstETHLimit: 10,
     justLink: 'https://djed-test.tronscan.io/',
     justList: 'https://sunlists.justnetwork.io/',
     sunUrl: 'http://123.56.166.152:18109/',

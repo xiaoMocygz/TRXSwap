@@ -16,7 +16,8 @@ const MEDIA_WIDTHS = {
   upToExtraSmall: 500,
   upToSmall: 600,
   upToMedium: 960,
-  upToLarge: 1280
+  upToLarge: 1280,
+  upToMoreSmall:400
 }
 
 const mediaWidthTemplates: { [width in keyof typeof MEDIA_WIDTHS]: typeof css } = Object.keys(MEDIA_WIDTHS).reduce(

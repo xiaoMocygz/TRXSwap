@@ -25,6 +25,14 @@ import { Dots } from '../swap/styleds'
 export const FixedHeightRow = styled(RowBetween)`
   height: 24px;
 `
+export const FixedHeightRow2 = styled(RowBetween)`
+  height:24px;
+  ${({ theme }) => theme.mediaWidth.upToMoreSmall`
+    display:flex;
+    height:40px;
+    flex-direction: column;
+  `};
+`
 
 export const HoverCard = styled(Card)`
   border: 1px solid ${({ theme }) => theme.bg2};
@@ -74,7 +82,7 @@ export function MinimalPositionCard({ pair, showUnwrapped = false, border }: Pos
                 </Text>
               </RowFixed>
             </FixedHeightRow>
-            <FixedHeightRow onClick={() => setShowMore(!showMore)}>
+            <FixedHeightRow2 onClick={() => setShowMore(!showMore)}>
               <RowFixed>
                 <DoubleCurrencyLogo currency0={currency0} currency1={currency1} margin={true} size={20} />
                 <Text fontWeight={500} fontSize={20}>
@@ -86,7 +94,7 @@ export function MinimalPositionCard({ pair, showUnwrapped = false, border }: Pos
                   {userPoolBalance ? userPoolBalance.toSignificant(4) : '-'}
                 </Text>
               </RowFixed>
-            </FixedHeightRow>
+            </FixedHeightRow2>
             <AutoColumn gap="4px">
               <FixedHeightRow>
                 <Text color="#888D9B" fontSize={16} fontWeight={500}>

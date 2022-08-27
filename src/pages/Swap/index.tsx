@@ -408,7 +408,7 @@ export default function Swap() {
                 >
                   {approval === ApprovalState.PENDING ? (
                     <AutoRow gap="6px" justify="center">
-                      批准 <Loader stroke="white" />
+                      授权 <Loader stroke="white" />
                     </AutoRow>
                   ) : approvalSubmitted && approval === ApprovalState.APPROVED ? (
                     '合法的'

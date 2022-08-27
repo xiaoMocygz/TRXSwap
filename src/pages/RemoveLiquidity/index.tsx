@@ -220,9 +220,9 @@ export default function RemoveLiquidity({
     let methodNames: string[], args: Array<string | string[] | number | boolean>
     // we have approval, use normal remove liquidity
     if (approval === ApprovalState.APPROVED) {
-      // removeLiquidityTRX
+      // removeLiquidityETH
       if (oneCurrencyIsETH) {
-        methodNames = ['removeLiquidityTRX', 'removeLiquidityTRXSupportingFeeOnTransferTokens']
+        methodNames = ['removeLiquidityETH', 'removeLiquidityETHSupportingFeeOnTransferTokens']
         args = [
           currencyBIsETH ? tokenA.address : tokenB.address,
           liquidityAmount.raw.toString(),
@@ -248,9 +248,9 @@ export default function RemoveLiquidity({
     }
     // we have a signataure, use permit versions of remove liquidity
     else if (signatureData !== null) {
-      // removeLiquidityTRXWithPermit
+      // removeLiquidityETHWithPermit
       if (oneCurrencyIsETH) {
-        methodNames = ['removeLiquidityTRXWithPermit', 'removeLiquidityTRXWithPermitSupportingFeeOnTransferTokens']
+        methodNames = ['removeLiquidityETHWithPermit', 'removeLiquidityETHWithPermitSupportingFeeOnTransferTokens']
         args = [
           currencyBIsETH ? tokenA.address : tokenB.address,
           liquidityAmount.raw.toString(),
@@ -264,7 +264,7 @@ export default function RemoveLiquidity({
           signatureData.s
         ]
       }
-      // removeLiquidityTRXWithPermit
+      // removeLiquidityETHWithPermit
       else {
         methodNames = ['removeLiquidityWithPermit']
         args = [
@@ -582,15 +582,15 @@ export default function RemoveLiquidity({
                               currencyB === ETHER ? WETH[chainId].address : currencyIdB
                             }`}
                           >
-                            Receive WTRX
+                            Receive WETH
                           </StyledInternalLink>
                         ) : oneCurrencyIsWETH ? (
                           <StyledInternalLink
                             to={`/remove/${
-                              currencyA && currencyEquals(currencyA, WETH[chainId]) ? 'TRX' : currencyIdA
-                            }/${currencyB && currencyEquals(currencyB, WETH[chainId]) ? 'TRX' : currencyIdB}`}
+                              currencyA && currencyEquals(currencyA, WETH[chainId]) ? 'ETH' : currencyIdA
+                            }/${currencyB && currencyEquals(currencyB, WETH[chainId]) ? 'ETH' : currencyIdB}`}
                           >
-                            Receive TRX
+                            Receive ETH
                           </StyledInternalLink>
                         ) : null}
                       </RowBetween>
@@ -674,7 +674,7 @@ export default function RemoveLiquidity({
                     fontSize={16}
                   >
                     {approval === ApprovalState.PENDING ? (
-                      <Dots>批准</Dots>
+                      <Dots>授权</Dots>
                     ) : approval === ApprovalState.APPROVED || signatureData !== null ? (
                       '合法的'
                     ) : (
