@@ -15,7 +15,7 @@ const Config = {
 
 const chain = {
   privateKey: '01',
-  fullHost: 'https://api.nileex.io/'
+  fullHost: 'https://api.trongrid.io/'
 }
 
 const DATA_LEN = 64
