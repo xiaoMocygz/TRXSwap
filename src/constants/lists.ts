@@ -2,10 +2,10 @@
 // export const DEFAULT_TOKEN_LIST_URL = 'tokens.uniswap.eth'
 
 export const DEFAULT_TOKEN_LIST_URL =
-  'https://raw.githubusercontent.com/XJ525/ListTokens/main/trxTokenLists/eotcswapV2Test.json'
+  'https://raw.githubusercontent.com/XJ525/ListTokens/main/trxTokenLists/eotcswapV2Main.json'
 
 export const DEPRECATED_TOKEN_LIST_URL =
-  'https://raw.githubusercontent.com/XJ525/ListTokens/main/trxTokenLists/eotcswapV2Test.json'
+  'https://raw.githubusercontent.com/XJ525/ListTokens/main/trxTokenLists/eotcswapV2Main.json'
 
 export const DEFAULT_LIST_OF_LISTS: string[] = [
   DEFAULT_TOKEN_LIST_URL

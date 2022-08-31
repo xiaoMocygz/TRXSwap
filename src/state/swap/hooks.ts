@@ -295,8 +295,8 @@ export function useDefaultsFromURLSearch():
       replaceSwapState({
         typedValue: parsed.typedValue,
         field: parsed.independentField,
-        inputCurrencyId: '0xea51342dabbb928ae1e576bd39eff8aaf070a8c6',
-        outputCurrencyId: '0x2129f037eb93a9a36eac7e2a0fb981f3ad3d0ae8',
+        inputCurrencyId: '0xa614f803b6fd780986a42c78ec9c7f77e6ded13c',
+        outputCurrencyId: '0xdfe9d10781d0e48bcc03f0fda2067e45aec6a144',
         // inputCurrencyId: parsed[Field.INPUT].currencyId,
         // outputCurrencyId: parsed[Field.OUTPUT].currencyId,
         recipient: parsed.recipient
