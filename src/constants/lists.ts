@@ -8,7 +8,7 @@ export const DEPRECATED_TOKEN_LIST_URL =
   'https://raw.githubusercontent.com/XJ525/ListTokens/main/trxTokenLists/eotcswapV2Test.json'
 
 export const DEFAULT_LIST_OF_LISTS: string[] = [
-  DEFAULT_TOKEN_LIST_URL,
+  DEFAULT_TOKEN_LIST_URL
   // DEPRECATED_TOKEN_LIST_URL
   /*
   't2crtokens.eth', // kleros

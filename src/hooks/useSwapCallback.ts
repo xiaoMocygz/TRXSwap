@@ -211,12 +211,13 @@ export function useSwapCallback(
         // @TODO(tron): make sure the right thing is to always pick first element of swapCalls
         // console.log({ swapCalls })
         const {
-          /*contract,*/
+          contract,
           parameters: { methodName, args, value }
           // gasEstimate
         } = swapCalls[0]
         // console.log(swapCalls[0], 'swapCalls[0]')
         // console.log(...args, '...args')
+        console.log(contract, 'contract,')
         const [amountIn, amountOutMin, path, to, deadline] = [...args]
 
         const functionSelector = 'swapExactTokensForTokens(uint256,uint256,address[],address,uint256)'
@@ -229,9 +230,8 @@ export function useSwapCallback(
         ]
         const options = {}
         // 路由合约地址
-        return trigger('TSsxjv5fmbkxzMPMvh5KzTxBGY2TYkJoxs', functionSelector, parameters, options)
+        return trigger('TUuTZhc1Yo3ou9FSeNKhTBEnPWA5gHDGF4', functionSelector, parameters, options)
           .then((response: any) => {
-            console.log(response, 'response')
             response.hash = '0x' + response.txid
             const inputSymbol = trade.inputAmount.currency.symbol
             const outputSymbol = trade.outputAmount.currency.symbol
