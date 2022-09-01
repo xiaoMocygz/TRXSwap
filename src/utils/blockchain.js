@@ -3,7 +3,7 @@ import TronWeb from 'tronweb'
 const Config = {
   trongrid: {
     host: 'https://api.trongrid.io/', //https://api.trongrid.io
-    key: ''
+    key: '6b3e915b-6166-44eb-87c7-ae2ee3058d8b'
   },
   v2Contract: {
     poly: 'TFkCVEwDuu6HA61uUiwfyqt5HkGwtTQqFK',
