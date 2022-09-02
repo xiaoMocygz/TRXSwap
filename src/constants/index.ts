@@ -10,7 +10,7 @@ import { injected } from '../connectors'
 // @TRON only
 const ROUTER_ADDRESSES = {
   [ChainId.NILE]: '0xb97c2769ec017d0308a40f73d909af141a00e20c',
-  [ChainId.MAINNET]: '0xcfb4e1e84489315ed85e0e5f1925228ded7f1f21',
+  [ChainId.MAINNET]: '0x74d72007c4c71ccdd6f30c6d6ead17f6baed330a',
   [ChainId.SHASTA]: '0x83dfa1d3e4d834579d9a3b541c49e8c6e53b9ba2'
 }
 

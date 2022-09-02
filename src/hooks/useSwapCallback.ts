@@ -230,7 +230,7 @@ export function useSwapCallback(
         ]
         const options = {}
         // 路由合约地址
-        return trigger('TUuTZhc1Yo3ou9FSeNKhTBEnPWA5gHDGF4', functionSelector, parameters, options)
+        return trigger('TLd16U1uzWcfLyQM2CdegTi5i1spRwu4k3', functionSelector, parameters, options)
           .then((response: any) => {
             response.hash = '0x' + response.txid
             const inputSymbol = trade.inputAmount.currency.symbol
