@@ -16,7 +16,7 @@ const Config = {
   remainTrx: 100,
   chain: {
     privateKey: '01',
-    fullHost: 'https://api.nileex.io/'
+    fullHost: 'https://api.trongrid.io/'
   }
 }
 

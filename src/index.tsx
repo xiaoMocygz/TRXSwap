@@ -16,9 +16,10 @@ import TransactionUpdater from './state/transactions/updater'
 import UserUpdater from './state/user/updater'
 import ThemeProvider, { FixedGlobalStyle, ThemedGlobalStyle } from './theme'
 import getLibrary from './utils/getLibrary'
+// import Vconsole from 'vconsole'
+// new Vconsole()
 
 const Web3ProviderNetwork = createWeb3ReactRoot(NetworkContextName)
-
 if ('ethereum' in window) {
   ;(window.ethereum as any).autoRefreshOnNetworkChange = false
 }
